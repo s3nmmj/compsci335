@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Southern Hemisphere Institute of Technology</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://localhost:5000/logo-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="a3.css">
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <a href="http://localhost:5000/a3/a3.html"><img src="http://localhost:5000/api/GetLogo" width="40%" height="40%" /></a>
+            </div>
+            <nav id="nav" class="topnav">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" id="nav_home">&#127969;&nbsp;&nbsp;Home</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" id="nav_staff">&#128199;&nbsp;&nbsp;Staff</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" id="nav_products">&#128722;&nbsp;&nbsp;Products</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" id="nav_guest_book">&#128212;&nbsp;&nbsp;Guest Book</a>
+                    </li>
+                    <li class="last" id="nav_login_li">
+                        <a href="javascript:void(0);" id="nav_login">&#128747;&nbsp;&nbsp;Login</a> /
+                        <a href="javascript:void(0);" id="nav_register">&#128640;&nbsp;&nbsp;Register</a>
+                    </li>
+                    <li class="last" id="nav_logout_li" style="display:none;">
+                        <a href="javascript:void(0);" id='nav_logout'>&#128748;&nbsp;&nbsp;Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <!-- Main content block to be supplied by page. -->
+            <div id="homepage" style="display: block;">
+                <section class="clear" style="display: block;">
+                    <article class="four_quarter">
+                        <figure>
+                            <img src="http://localhost:5000/api/GetLogo" width="500" height="500">
+                            <figcaption>
+                                <h2>Welcome!</h2>
+                                <p>
+                                    The Southern Hemisphere Institute of Technology(SHIT) is a research university based in Auckland, New Zealand. It is one of the largest universities, most comprehensive and highest-ranked university in New Zealand and consistently places among the Top
+                                    100 universities in the world. The institution was established in hunders of years ago. Originally it was housed in a disused courthouse. Today, the SHIT is one of the New Zealand's largest university by enrolment,
+                                    hosting about 40,000 students on five Auckland campuses. The City Campus, in central Auckland, has the bulk of the students and faculties. There are eight faculties, including a law school, as well as three associated
+                                    research institutes.
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </section>
+            </div>
+            <div id="products" style="display: none;">
+                <h2>Products</h2>
+                <div>
+                    <input type="search" id="product_search" name="product_search" placeholder="Search the product..." required>
+                </div>
+                <section class="clear" id="products_section">
+                    <p>Loading...</p>
+                </section>
+            </div>
+            <div id="staff" style="display: none;">
+                <h2>Staff</h2>
+                <section id="staff_section" class="clear">
+                    <p>Loading...</p>
+                </section>
+            </div>
+            <div id="register" style="display: none;">
+                <h2>Register</h2>
+                <section class="clear">
+                    <form method="POST" action="" onsubmit="return false;">
+                        <div class="form-field">
+                            <label for="user_name">Username</label>
+                            <input id="register_user_name" name="user_name" required type="text" value="">
+                        </div>
+                        <div class="form-field">
+                            <label for="password">Password</label>
+                            <input id="register_password" name="password" required type="password" value="">
+                        </div>
+                        <div class="form-field">
+                            <label for="address">address</label>
+                            <input id="register_address" name="address" type="text" value="">
+                        </div>
+                        <ul id="register_message" style="display: none;">
+                            <li>errors</li>
+                        </ul>
+                        <input id="register_submit" name="submit" type="submit" value="Register">
+                    </form>
+                </section>
+            </div>
+            <div id="login" style="display: none;">
+                <section class="clear">
+                    <h2>Login</h2>
+                    <form method="POST" action="" onsubmit="return false;">
+                        <div class="form-field">
+                            <label for="user_name">Username</label>
+                            <input id="user_name" name="user_name" required type="text" value="">
+                        </div>
+                        <div class="form-field">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" required type="password" value="">
+                        </div>
+                        <ul id="login_message" style="display: none;">
+                            <li>errors</li>
+                        </ul>
+                        <input id="login_submit" name="submit" type="submit" value="Login">
+                    </form>
+                </section>
+            </div>
+            <div id="guest_book" style="display: none;">
+                <section class="clear">
+                    <h2>Guest Book</h2>
+                    <form method="POST" action="" onsubmit="return false;">
+                        <form action="" method="post">
+                            <div class="form-field">
+                                <label for="comment">Comment</label>
+                                <br>
+                                <textarea class="textarea" cols="50" id="comment" name="comment" placeholder="type your comment" required rows="6" size="100" wrap="hard"></textarea>
+                            </div>
+                            <div class="form-field">
+                                <label for="user_name">Your name</label>
+                                <input id="comment_user_name" name="user_name" required type="text" value="">
+                            </div>
+                            <ul id="comment_message" style="display: none;">
+                                <li>errors</li>
+                            </ul>
+                            <input id="comment_submit" name="submit" type="submit" value="Submit">
+                        </form>
+                    </form>
+                    <article class="four_quarter" id='guest_book_recent_comments'>
+                        <h3>Recent Comments</h3>
+                        <p>this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment
+                            this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment this is a test comment
+                            this is a test comment
+
+                        </p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper row4">
+        <footer id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a href="#">COMPSCI 335: Functional
+                    Programming and Distributed Services</a></p>
+            <p class="fl_right" id="version"></p>
+        </footer>
+    </div>
+    <div id='float_layer_div' style="display: none;">
+        <div id='full_screen'></div>
+        <div id="float_layer">
+            <a href="javascript:void(0);" id="hide_float_layer">&#10005;</a>
+            <p id='float_layer_content'>Thank you 335 for buying product. Your order 1234 is being processed now!</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="a3.js"></script>
+</body>
+
+</html>
